@@ -1,0 +1,30 @@
+{{define "login"}}
+
+{{template "_head"}}
+{{template "_menu"}}
+
+<div class="container">
+<form method="POST" action="SQL_Login">
+    <!-- Email input -->
+    <div data-mdb-input-init class="form-outline mb-4">
+      <label class="form-label" for="campo_email">E-mail</label>
+      <input type="email" name="campo_email" class="form-control"/>
+    </div>
+  
+    <!-- Password input -->
+    <div data-mdb-input-init class="form-outline mb-4">
+      <label class="form-label" for="campo_senha">Senha</label>
+      <input type="password" name="campo_senha" class="form-control"/>
+    </div>
+  
+    <!-- Submit button -->
+    <button type="submit" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-block mb-4">Entrar</button>
+  
+    <!-- Register buttons -->
+    <div class="text-center">
+      <p>Novo por aqui? <a href="cria-user">Registrar-se</a></p>
+    </div>
+</form>
+</div>
+
+{{end}}

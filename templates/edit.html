@@ -1,0 +1,58 @@
+{{define "Edit"}}
+
+{{template "_head"}}
+{{template "_menu"}}
+
+<body>
+    <style>
+        .container {
+            display: flex;
+            justify-content: center;
+            margin-top: 15px;
+        }
+    </style>
+<div class="container">
+    <form method="POST" action="SQL_Atualizar">
+        <input type="hidden" name="id" value="{{.Id}}">
+        <div class="row">
+            <div class="col-sm-8">
+                <div class="form-group">
+                    <label for="nome">Nome:</label>
+                    <input type="text" name="nome" class="form-control" value="{{.Nome}}">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-8">
+                <div class="form-group">
+                    <label for="checkin">CheckIn:</label>
+                    <input type="date" name="checkin" class="form-control" value="{{.CheckIn}}">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-8">
+                <div class="form-group">
+                    <label for="checkout">CheckOut:</label>
+                    <input type="date" name="checkout" class="form-control" value="{{.CheckOut}}">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-8">
+                <div class="form-group">
+                    <label for="quarto">Quarto:</label>
+                    <input type="number" name="quarto" class="form-control" value="{{.Quarto}}">
+                </div>
+            </div>
+        </div>
+        <button type="submit" value="salvar" class="btn btn-success">Atualizar</button>
+        <a class="btn btn-info" href="/home">Voltar</a>
+    </form>
+</div>
+
+</body>
+
+</html>
+
+{{end}}
